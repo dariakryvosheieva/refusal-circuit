@@ -44,3 +44,16 @@ refusal-circuit/
 ├── sweep_detector_layer.py            # Detector layer sweep
 └── sweep.sbatch                       # Shell script to submit the sweep on GPU
 ```
+
+## Citation
+
+```bibtex
+@misc{refusal-circuit,
+  title        = {Installing a Refusal Circuit into a Language Model},
+  author       = {Kryvosheieva, Daria},
+  year         = {2026},
+  month        = nov,
+  howpublished = {https://dariakryvosheieva.github.io/refusal-circuit.html},
+  note         = {Blog post}
+}
+```
