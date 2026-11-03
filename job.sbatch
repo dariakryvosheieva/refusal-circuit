@@ -18,7 +18,7 @@ PROBE_STEPS="${PROBE_STEPS:-500}"
 EXTRA_ARGS="${EXTRA_ARGS:-}"
 
 cd "$SLURM_SUBMIT_DIR"
-mkdir -p logs
+mkdir -p logs generations
 
 export HF_HOME=/orcd/scratch/orcd/001/daria_k/hf_cache
 export HF_HUB_OFFLINE=1
@@ -30,4 +30,7 @@ eval /orcd/scratch/orcd/001/daria_k/.venv/bin/python run_refusal_circuit.py \
   --model "$MODEL" \
   --probe-steps "$PROBE_STEPS" \
   --checkpoint "refusal_circuit_${TAG}.pt" \
-  $EXTRA_ARGS 2>&1 \| grep -v Warning
+  $EXTRA_ARGS
+
+eval /orcd/scratch/orcd/001/daria_k/.venv/bin/python judge_generations.py \
+  generations/base_circuit_broad.jsonl 
