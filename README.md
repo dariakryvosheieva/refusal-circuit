@@ -34,12 +34,12 @@ sbatch sweep.sbatch
 ```
 refusal-circuit/
 ├── data/                              # Training and evaluation datasets
-├── architecture.py                    # Architectural facts and addressing helpers for the model
+├── architecture.py                    # Architectural facts and addressing helpers
 ├── data.py                            # Data loading utilities
 ├── evaluation.py                      # Evaluation utilities
 ├── job.sbatch                         # Shell script to submit the main experiment on GPU
-├── judge_generations.py               # Score model responses for refusal and harmful content
-├── refusal_circuit.py                 # Library for the refusal circuit
+├── judge_generations.py               # Judging script to score responses for refusal and harmful content
+├── refusal_circuit.py                 # Library for circuit training and installation
 ├── run_refusal_circuit.py             # Driver for the main experiment
 ├── sweep_detector_layer.py            # Detector layer sweep
 └── sweep.sbatch                       # Shell script to submit the sweep on GPU

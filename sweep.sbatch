@@ -17,7 +17,6 @@ TAG="${TAG:-qwen1.5b_base}"
 PROBE_STEPS="${PROBE_STEPS:-500}"
 EXTRA_ARGS="${EXTRA_ARGS:-}"
 
-cd "$SLURM_SUBMIT_DIR"
 mkdir -p logs generations
 
 export HF_HOME=/orcd/scratch/orcd/001/daria_k/hf_cache
